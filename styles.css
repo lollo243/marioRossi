@@ -1,0 +1,279 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f460;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: dodgerblue;
+    color:white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-content {
+    text-align: left;
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    color: white; 
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.subtext {
+    color: white;
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+
+.Logo img {
+    height: 150px;
+    width: 350px;
+    object-fit: contain;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+a{
+    color: white;
+}
+
+section {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1000px;
+    background: linear-gradient(to bottom, #f4f4f4 0%, #ffffff 100%);
+}
+
+section#chi-sono,
+section#servizi,
+section#feedback,
+section#contatti {
+    background: linear-gradient(to bottom, #ffffff 0%, #f4f4f4 100%);
+    padding: 40px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    font-size: 0.9em;
+    padding: 10px;
+    text-align: center;
+}
+
+.containerMR {
+    display: flex;
+    align-items: center;
+}
+
+.containerMR> :first-child {
+    max-width: 50%;
+    height: auto;
+    margin-right: 35px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.containerMR> :nth-child(2) {
+    max-width: 50%;
+    height: auto;
+}
+
+h2 {
+    color: #0066cc;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+    color: #333366;
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+section p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.feedback p {
+    font-size: 1em;
+    color: #333;
+}
+
+.logo {
+    height: 50px;
+}
+
+.carosello-servizi {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+.carosello-servizi .servizio {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 0 0 250px;
+    padding: 15px;
+    text-align: center;
+}
+
+.carosello-servizi img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.feedback {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    margin: 10px 0;
+}
+
+.feedback .profile {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.feedback .rating {
+    color: #ff9900;
+}
+
+#contatti .call-button {
+    font-size: 1.2em;
+    background-color: #004aad;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#zona-operativa img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+#collaborazioni .loghi-aziende {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#collaborazioni img {
+    width: 100px;
+    height: auto;
+}
+
+
+/* Base styles (already existing) */
+
+/* Header adjustments for mobile screens */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column; /* Disporre il logo sopra il testo */
+        align-items: center;
+        text-align: center;
+    }
+
+    .Logo img {
+        width: 80%;  /* Riduce la larghezza dell'immagine su schermi più piccoli */
+        height: auto;
+    }
+
+    .containerMR {
+        flex-direction: column; /* Metti l'immagine e il testo uno sopra l'altro */
+        margin-right: 0; /* Rimuove il margine tra immagine e testo */
+        text-align: center; /* Centra il testo sotto l'immagine */
+    }
+
+    .containerMR > img {
+        max-width: 80%; /* Riduce la larghezza dell'immagine nel container */
+        margin-bottom: 20px; /* Aggiunge uno spazio tra l'immagine e il testo */
+    }
+
+    .containerMR p {
+        font-size: 1.1em; /* Riduce la dimensione del testo per la leggibilità */
+    }
+
+    nav ul {
+        flex-direction: column; /* Disporre i link in colonna */
+        gap: 10px;
+        text-align: center; /* Centra i link */
+    }
+
+    nav ul li {
+        display: block; /* I link saranno disposti uno sotto l'altro */
+    }
+
+    .carosello-servizi {
+        flex-direction: column; /* Mostra i servizi in colonna */
+        padding: 20px;
+    }
+
+    .carosello-servizi .servizio {
+        flex: 0 0 100%; /* Ogni servizio occuperà l'intera larghezza */
+        margin-bottom: 20px;
+    }
+
+    footer {
+        font-size: 0.8em; /* Riduce la dimensione del testo nel footer */
+        padding: 15px;
+    }
+}
+
+/* Ulteriori aggiustamenti per schermi più piccoli (smartphone) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em; /* Riduce la dimensione del titolo principale */
+    }
+
+    section h2 {
+        font-size: 1.5em; /* Riduce la dimensione dei titoli delle sezioni */
+    }
+
+    .feedback p {
+        font-size: 1em; /* Riduce la dimensione del testo nei feedback */
+    }
+
+    .feedback .profile {
+        width: 40px;
+        height: 40px; /* Riduce la dimensione dell'immagine del profilo */
+    }
+
+    #contatti .call-button {
+        font-size: 1.1em; /* Riduce la dimensione del bottone di chiamata */
+        padding: 12px 25px; /* Riduce la dimensione del bottone */
+    }
+}
+
