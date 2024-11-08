@@ -1,3 +1,4 @@
+/* Base styles (already existing) */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -5,275 +6,174 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+/* Header Styles */
 header {
     background-color: dodgerblue;
-    color:white;
-    padding: 30px 0;
+    color: white;
+    padding: 3vw 0; /* Adattiamo il padding in base alla larghezza del viewport */
     text-align: center;
-}
-
-.header-container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
 }
 
-.header-content {
-    text-align: left;
+header .header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw; /* Gap dinamico in base alla larghezza del viewport */
+    flex-wrap: wrap;
 }
 
 header h1 {
     font-family: 'Poppins', sans-serif;
-    color: white; 
-    font-size: 2em;
+    color: white;
+    font-size: 3vw; /* Impostiamo la grandezza del testo in base alla larghezza dello schermo */
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-.subtext {
-    color: white;
-    font-size: 1.1em;
-    margin-top: 5px;
-}
-
-.Logo img {
-    height: 150px;
-    width: 350px;
-    object-fit: contain;
+header .Logo img {
+    width: 40vw; /* Immagine responsiva che si adatta alla larghezza del viewport */
+    height: auto;
+    border-radius: 5px;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     display: flex;
+    gap: 2vw;
     justify-content: center;
-    gap: 15px;
 }
 
-a{
+nav ul li {
+    display: inline-block;
+}
+
+nav ul li a {
     color: white;
+    font-size: 1.2em;
+    text-decoration: none;
 }
 
+/* Section Styles */
 section {
-    padding: 20px;
+    padding: 5vw;
     margin: 0 auto;
     max-width: 1000px;
     background: linear-gradient(to bottom, #f4f4f4 0%, #ffffff 100%);
 }
 
-section#chi-sono,
-section#servizi,
-section#feedback,
-section#contatti {
-    background: linear-gradient(to bottom, #ffffff 0%, #f4f4f4 100%);
-    padding: 40px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    font-size: 0.9em;
-    padding: 10px;
-    text-align: center;
-}
-
-.containerMR {
-    display: flex;
-    align-items: center;
-}
-
-.containerMR> :first-child {
-    max-width: 50%;
-    height: auto;
-    margin-right: 35px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.containerMR> :nth-child(2) {
-    max-width: 50%;
-    height: auto;
-}
-
-h2 {
+section h2 {
     color: #0066cc;
-    font-size: 1.8em;
-    margin-bottom: 15px;
-}
-
-h3 {
-    font-family: 'Poppins', sans-serif;
-    color: #333366;
-    font-size: 1.5em;
-    margin-top: 10px;
+    font-size: 2.5vw; /* Dimensione del testo proporzionale */
+    margin-bottom: 1.5vw;
 }
 
 section p {
-    font-size: 1.1em;
+    font-size: 1.2em;
     color: #555;
 }
 
-.feedback p {
-    font-size: 1em;
-    color: #333;
-}
-
-.logo {
-    height: 50px;
-}
-
+/* Container services section */
 .carosello-servizi {
     display: flex;
-    gap: 15px;
-    overflow-x: auto;
-    padding: 10px;
+    flex-wrap: wrap;
+    gap: 2vw;
+    justify-content: center;
 }
 
 .carosello-servizi .servizio {
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    flex: 0 0 250px;
-    padding: 15px;
+    width: 45%; /* Adattato per non sovrapporsi in schermi piccoli */
+    padding: 2vw;
     text-align: center;
 }
 
 .carosello-servizi img {
-    max-width: 100%;
+    width: 100%;
     height: auto;
     border-radius: 5px;
 }
 
+/* Feedback Section */
 .feedback {
-    background-color: #f0f0f0;
-    border-radius: 10px;
     display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 15px;
-    margin: 10px 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2vw;
+    margin: 2vw 0;
 }
 
 .feedback .profile {
-    width: 50px;
-    height: 50px;
+    width: 10vw; /* Proporzionale alla larghezza del viewport */
+    height: 10vw;
     border-radius: 50%;
+    object-fit: cover;
 }
 
-.feedback .rating {
-    color: #ff9900;
+.feedback p {
+    font-size: 1.1em;
 }
 
+/* Contact Section */
 #contatti .call-button {
-    font-size: 1.2em;
+    font-size: 2vw; /* Scala la grandezza del bottone */
     background-color: #004aad;
     color: white;
-    padding: 10px 20px;
+    padding: 1vw 3vw;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-#zona-operativa img {
-    max-width: 100%;
-    border-radius: 10px;
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    font-size: 1em;
+    padding: 1vw;
+    text-align: center;
 }
 
-#collaborazioni .loghi-aziende {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-#collaborazioni img {
-    width: 100px;
-    height: auto;
-}
-
-
-/* Base styles (already existing) */
-
-/* Header adjustments for mobile screens */
+/* Mobile Adjustments */
 @media (max-width: 768px) {
-    .header-container {
-        flex-direction: column; /* Disporre il logo sopra il testo */
-        align-items: center;
-        text-align: center;
+    header {
+        padding: 4vw 0; /* Aumenta un po' il padding per mobile */
     }
 
-    .Logo img {
-        width: 80%;  /* Riduce la larghezza dell'immagine su schermi più piccoli */
-        height: auto;
+    header h1 {
+        font-size: 5vw; /* Riduce la dimensione del titolo per dispositivi piccoli */
     }
 
     .containerMR {
-        flex-direction: column; /* Metti l'immagine e il testo uno sopra l'altro */
-        margin-right: 0; /* Rimuove il margine tra immagine e testo */
-        text-align: center; /* Centra il testo sotto l'immagine */
+        flex-direction: column; /* Metti l'immagine sopra il testo */
+        align-items: center;
+        gap: 2vw;
     }
 
-    .containerMR > img {
-        max-width: 80%; /* Riduce la larghezza dell'immagine nel container */
-        margin-bottom: 20px; /* Aggiunge uno spazio tra l'immagine e il testo */
-    }
-
-    .containerMR p {
-        font-size: 1.1em; /* Riduce la dimensione del testo per la leggibilità */
-    }
-
-    nav ul {
-        flex-direction: column; /* Disporre i link in colonna */
-        gap: 10px;
-        text-align: center; /* Centra i link */
-    }
-
-    nav ul li {
-        display: block; /* I link saranno disposti uno sotto l'altro */
-    }
-
-    .carosello-servizi {
-        flex-direction: column; /* Mostra i servizi in colonna */
-        padding: 20px;
+    .containerMR img {
+        width: 80%; /* L'immagine sarà più piccola per dispositivi mobili */
     }
 
     .carosello-servizi .servizio {
-        flex: 0 0 100%; /* Ogni servizio occuperà l'intera larghezza */
-        margin-bottom: 20px;
-    }
-
-    footer {
-        font-size: 0.8em; /* Riduce la dimensione del testo nel footer */
-        padding: 15px;
-    }
-}
-
-/* Ulteriori aggiustamenti per schermi più piccoli (smartphone) */
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.8em; /* Riduce la dimensione del titolo principale */
-    }
-
-    section h2 {
-        font-size: 1.5em; /* Riduce la dimensione dei titoli delle sezioni */
-    }
-
-    .feedback p {
-        font-size: 1em; /* Riduce la dimensione del testo nei feedback */
+        width: 100%; /* Ogni servizio prenderà tutta la larghezza su dispositivi mobili */
     }
 
     .feedback .profile {
-        width: 40px;
-        height: 40px; /* Riduce la dimensione dell'immagine del profilo */
+        width: 20vw;
+        height: 20vw;
     }
 
     #contatti .call-button {
-        font-size: 1.1em; /* Riduce la dimensione del bottone di chiamata */
-        padding: 12px 25px; /* Riduce la dimensione del bottone */
+        font-size: 5vw; /* Bottone proporzionato per mobile */
+        padding: 2vw 4vw;
     }
 }
-
